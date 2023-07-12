@@ -46,12 +46,12 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $data = $request->validated();
-
+        // dd($data);
         $newProject = new Project();
         $newProject->fill($data);
         $newProject->save();
 
-        $newProject->technologys()->attach( $data["technologys"]);
+        $newProject->technologys()->sync( $data["technologys"]);
 
         return to_route("admin.projects.show", $newProject);
     }

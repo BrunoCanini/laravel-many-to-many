@@ -31,8 +31,8 @@
         <div class="row">
             @foreach ($technologys as $i => $techology)
                     <div class="form-check col-3 d-flex flex-wrap">
-                        <input type="checkbox" value="{{$techology->id}}" name="tags[{{$i}}]" id="techology" class="form-check-input">
-                        <label for="tags[{{$i}}]" class="form-check-label">{{$techology->name}}</label>
+                        <input type="checkbox" value="{{$techology->id}}" name="technologys[{{$i}}]" id="techology" class="form-check-input">
+                        <label for="technologys[{{$i}}]" class="form-check-label">{{$techology->name}}</label>
                     </div>
             @endforeach
         </div>
