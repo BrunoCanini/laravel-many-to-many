@@ -27,6 +27,17 @@
         @endforeach
     </select>
 
+    <div class="container my-2">
+        <div class="row">
+            @foreach ($technologys as $i => $techology)
+                    <div class="form-check col-3 d-flex flex-wrap">
+                        <input type="checkbox" value="{{$techology->id}}" name="tags[{{$i}}]" id="techology" class="form-check-input">
+                        <label for="tags[{{$i}}]" class="form-check-label">{{$techology->name}}</label>
+                    </div>
+            @endforeach
+        </div>
+    </div>
+
     <input type="submit" class="form-control btn btn-primary my-4" value="Create" style="width: 10rem;">
 
 </form>

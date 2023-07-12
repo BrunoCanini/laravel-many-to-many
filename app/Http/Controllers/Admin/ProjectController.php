@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Category;
+use App\Models\Technology;
 
 class ProjectController extends Controller
 {
@@ -30,8 +31,9 @@ class ProjectController extends Controller
     public function create()
     {
         $categories= Category::all();
+        $technologys= Technology::all();
 
-        return view("admin.projects.create", compact("categories"));
+        return view("admin.projects.create", compact("categories", "technologys"));
 
     }
 
