@@ -3,7 +3,7 @@
 
 <h1>CREA NUOVO PRODOTTO</h1>
 
-<form action="{{route('admin.projects.store')}}" method="POST" class="needs-validation">
+<form action="{{route('admin.projects.store')}}" method="POST" class="needs-validation" enctype="multipart/form-data">
     @csrf
 
     <label for="title">Title</label>
@@ -38,7 +38,12 @@
         </div>
     </div>
 
-    <input type="submit" class="form-control btn btn-primary my-4" value="Create" style="width: 10rem;">
+    <label for="image">Import Image:</label>
+    <input type="file" name="image" id="image" class="form-control my-4">
+
+    <div>
+        <input type="submit" class="form-control btn btn-primary my-4" value="Create" style="width: 10rem;">
+    </div>
 
 </form>
 

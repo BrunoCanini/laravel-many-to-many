@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string("title", 160)->unique();
             $table->text("content")->nullable();
             $table->date("deadline")->nullable();
+            $table->string("image")->nullable();
+
 
 
             $table->timestamps();

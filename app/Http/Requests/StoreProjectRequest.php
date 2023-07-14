@@ -27,8 +27,9 @@ class StoreProjectRequest extends FormRequest
             "title" => "required|min:3|max:160",
             "content" => "max:65535",
             "deadline" => "required",
+            "image"=> "required",
             "category_id" => "nullable|exists:categories,id",
-            "technologys" => "required"
+            "technologys" => "required",
 
         ];
     }
