@@ -10,5 +10,8 @@
     <li>{{$technology->name}}</li>
     @endforeach
 </ul>
+<div>
+    <img src="{{ asset(" /storage/".$project->image) }}" alt="{{$project->image}}">
+</div>
 
 @endsection
