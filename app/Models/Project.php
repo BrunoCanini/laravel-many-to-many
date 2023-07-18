@@ -13,7 +13,8 @@ class Project extends Model
         "title",
         "content",
         "deadline",
-        "category_id"
+        "category_id",
+        "image"
     ];
     protected $dates = [
         'deadline',

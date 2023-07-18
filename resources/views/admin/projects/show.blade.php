@@ -11,7 +11,7 @@
     @endforeach
 </ul>
 <div>
-    <img src="{{ asset(" /storage/".$project->image) }}" alt="{{$project->image}}">
+    <img src="{{ asset("storage/" . $project->image) }}" alt="{{$project->title}}">
 </div>
 
 @endsection
