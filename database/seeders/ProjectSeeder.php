@@ -21,7 +21,7 @@ class ProjectSeeder extends Seeder
             $project->title = $faker->words(3, true);
             $project->content = $faker->text(500);
             $project->deadline = $faker->date('Y-m-d');
-            $project->image = $faker->imageUrl(800, 600, $project->title , true);
+            $project->image = "placeholder/placeholderImg.png";
             $project->category_id = rand(1,4);
             $project->save();
         }

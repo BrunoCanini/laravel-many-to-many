@@ -6,7 +6,7 @@
     <p>CONTENT: {{$project->content}}</p>
     <p>DEAD LINE: {{$project->deadline->format("d-m-Y")}}</p>
     <div>
-        <img src="{{$project->image}}" alt="">
+        <img src="{{ asset("storage/" . $project->image) }}" alt="">
     </div>
     <a href="{{route('admin.projects.show', $project)}}">Deteils</a>
     <hr>
